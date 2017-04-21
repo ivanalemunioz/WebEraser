@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WebEraser Test</title>
+</head>
+<body>
+	<div>
+		I'm a block
+	</div>
+	<span>
+		I'm inlined
+	</span>
+	<div style="float: right; margin-top: 20px;">
+		I'm a float
+	</div>
+	<br>
+	<a href='javascript:function startDeletes(){nodesList=document.querySelectorAll("body, html, body *"),each(nodesList,function(e,t){t.originalOver=t.onmouseover,t.originalOut=t.onmouseout,t.originalClick=t.onclick;var n="__eraserClass";t.onmouseover=function(e){e.stopPropagation();var o=t.className.indexOf(n);-1==o&&(t.className+=" "+n)},t.onmouseout=function(e){e.stopPropagation();var o=t.className.indexOf(n);-1!=o&&(t.className=t.className.substring(0,o)+t.className.substring(o+n.length))},t.onclick=function(e){e.preventDefault(),e.stopPropagation(),this.remove()}});var e=document.createElement("DIV");e.className="__eraserContollers";var t=document.createElement("SPAN");t.className="__endButton",t.innerHTML="End",e.setAttribute("id","eraserControllers"),t.onmouseover=function(e){e.stopPropagation()},t.onclick=endDeletes,e.appendChild(t),document.getElementsByTagName("body")[0].appendChild(e)}function endDeletes(){each(nodesList,function(e,t){t.onmouseover=t.originalOver,t.onmouseout=t.originalOut,t.onclick=t.originalClick}),null!=document.getElementById("eraserControllers")?document.getElementById("eraserControllers").remove():!1}function each(e,t){for(var n=0;n<e.length;n++)t(n,e[n])}if(null==document.getElementById("_eraserStyleSheet")){var styleSheet=document.createElement("STYLE");styleSheet.type="text/css",styleSheet.innerHTML=".__eraserContollers{position:fixed;top:0;right:0;padding:7px 7px;z-index: 99999999999999;text-align:center;}.__endButton{cursor:pointer;padding:5px 8px;background:#3db03d;border-radius:3px;color:#FFF;display:inline-block} .__endButton:hover{background:#279e27}.__endButton:hover:active{background:#26bf26}.__eraserClass:hover{border:3px solid #ff2b2b !important;cursor: pointer !important}",styleSheet.setAttribute("id","_eraserStyleSheet"),document.getElementsByTagName("head")[0].appendChild(styleSheet)}var nodesList;startDeletes();'>
+		Start WebEraser
+	</a>
+
+</body>
+</html>
