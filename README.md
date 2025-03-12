@@ -1,5 +1,5 @@
 # WebEraser
-A simple web elements deleter
+A simple web elements eraser
 
 ![weberaser](https://cloud.githubusercontent.com/assets/27704398/25283252/8039e554-2689-11e7-885b-1d050897fddc.gif)
 
